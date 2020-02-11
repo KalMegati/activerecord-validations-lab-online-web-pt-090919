@@ -3,6 +3,7 @@ class Post < ActiveRecord::Base
   validates :title, presence: true
   validates :content, length: {minimum: 250}
   validates :summary, length: {maximum: 250}
+<<<<<<< HEAD
   validates :category, inclusion: { in: ["Fiction", "Non-Fiction"] }
   validate :must_be_clickbait
   
@@ -11,5 +12,7 @@ class Post < ActiveRecord::Base
       errors.add(:title, "must be clickbait")
     end
   end
+=======
+>>>>>>> 3d9a3acc671f7e58d7509985b50c0377dbeeec13
   
 end
